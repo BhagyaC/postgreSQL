@@ -43,3 +43,37 @@ It will give a sql file we can open it on the vs code and edit it. For those who
 - the group by can be followed by the order by which will give the above relation with sorted values
 ## GROUP BY HAVING
 - This will help us to perform another operation after a aggrigation operation by the having term.
+
+- To check what all are the arithmetic operation that we can use with postgresql then just use the select operation and test them
+## ALIAS 
+- We can find another variable name for each of the  them we can use AS parameter to use another attribure name
+
+## COALESCE
+- It will give the first value in a list
+- It can be used to replace the null value to replace with another value
+- SELECT COALESCE(attribute,"not given") from tablename
+## NULLIF
+- This is to tackle the division by zero
+- it will take two arguments if both are same the result will be null otherwise the result is the first parameter
+- SELECT 10/NULLIF(0,0)
+## TIMESTAMP
+- The date or the time normally get stored as the timestamp
+- To get the date from the timestamp SELECT NOW():: DATE;
+- SELECT NOW()::TIME;
+- They have a documentation about the date and time types
+## ADDING AND SUBTRACTING THE TIME
+-  SELECT NOW() - INTERVAL '1 YEAR' 
+- If you want to get only the date from the final time stamp element then 
+- SELECT (NOW() + INTERVAL '10 MONTHS')::DATE;
+ 
+## EXTRACT SPECIFIC VALUES FROM THE TIME STAMP
+- SELECT EXTRACT(YEAR FROM NOW());
+## AGE FUNCTION
+- SELECT AGE(NOW(),atttribute of date of birth) AS DOB from table name
+## PRIMARY KEY 
+- The way to identify the unique values
+## UNIQUE CONSTRAINTS
+- To set up a column with unique values only
+## CHECK CONSTARINTS
+- Allow us to add the constrain based on a boolean value
+- like it will check the some condition for the boolean expression and then it will allow the only true values for the conditions
